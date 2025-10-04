@@ -1,6 +1,6 @@
-import time
+import time, secrets
 from typing import Dict, Any, Optional
-from jose import jwt, JWTError
+from jose import jwt
 from passlib.context import CryptContext
 from app.helpers.config import settings
 
@@ -21,5 +21,7 @@ def create_access_token(subject: str, claims: Optional[Dict[str, Any]] = None, e
     return token
 
 def decode_access_token(token: str) -> Dict[str, Any]:
-    payload = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
-    return payload
+    return jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])
+
+def generate_refresh_token() -> str:
+    return secrets.token_urlsafe(64)
