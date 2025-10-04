@@ -1,0 +1,94 @@
+# ---- Python / FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.cache/
+.venvaas/
+.venvaas/
+tests/
+venv/
+env/
+pip-wheel-metadata/
+pip-log.txt
+CL-Service_API_Master.md
+db.txt
+openapi.json
+struktur.txt
+note.txt
+dockerpush.sh
+
+# Coverage & test
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.pytest_cache/
+.tox/
+.nox/
+
+# Distribusi / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+.python-version  # pyenv
+
+# Logs & runtime
+logs/
+*.log
+*.pid
+*.seed
+tmp/
+temp/
+
+# App storage (hasil export/upload lokal)
+storage/
+uploads/
+export/
+exports/
+media/
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+.envrc
+
+# Docker
+# (biarkan Dockerfile & compose tetap ter-track)
+docker-data/
+*.tar
+
+# SSL/TLS & keys (hindari commit accidental)
+*.pem
+*.crt
+*.key
+*.p12
+certs/
+secrets/
+
+# Jupyter (kalau ada notebook analisa)
+.ipynb_checkpoints/
+
+# DB lokal (hindari commit DB file)
+*.sqlite
+*.sqlite3
+*.db
+
+# Node (kalau ada tooling FE di repo ini)
+node_modules/
+pnpm-lock.yaml
+yarn.lock
